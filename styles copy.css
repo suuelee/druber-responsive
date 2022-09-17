@@ -12,7 +12,6 @@
     flex-direction: column;
     box-sizing: border-box;
     width: 100%;
-
 }
 
 nav {
@@ -57,15 +56,6 @@ label.logo {
     width: 30%;
 }
 
-/* ----------------- ADDED --------------------- */
-
-@media (max-width: 800px) {
-    .descriptions>div {
-        height: 30%;
-        width: 100%;
-    }
-}
-
 .descriptions>div>img {
     width: 100%
 }
@@ -76,18 +66,7 @@ label.logo {
     flex-direction: row;
     justify-content: space-between;
     padding: 0, 100px, 0, 100px;
-    /* flex-wrap: wrap; */
 }
-
-/* ----------------- ADDED --------------------- */
-@media (max-width: 800px) {
-    .descriptions {
-        flex-direction: column;
-        border-style: solid;
-        border-color: red;
-    }
-}
-
 
 .order {
     display: flex;
