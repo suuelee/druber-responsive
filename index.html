@@ -7,21 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="navbar">
-        <nav>
-            <label class="logo">Druber</label>
+    <nav class="navbar">
+        <div class="brand-title">Druber</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <div class="navbar-links">
             <ul>
-                <li><a href="active">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Feedback</a></li>
             </ul>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
 
     <div class="container">
@@ -77,17 +84,17 @@
             Order a Druber now!
         </h1>
 
-        <div class="order">
+        <div class="order-now">
             <div>
                 <img src="images/map.png" width="100%">
             </div>
 
-            <div class="orderBox">
+            <div class="order-box">
                 <h3>
                     Where can your drone pick you up?
                 </h3>
 
-                <form class="orderPanel">
+                <form class="order-panel">
                     <input type="text" placeholder="Add a pickup location">
                     <input type="text" placeholder="Enter your destination">
                     <button>
