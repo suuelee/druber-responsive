@@ -18,14 +18,73 @@ Responsive design accounts for the size of the user's screen and adjusts accordi
 Although this solution can be widely applied across different languages and frameworks, I have chosen to use vanilla HTML/CSS for the purposes of this demonsration. 
 
 ## How will my solution be achieved? 
+1. Assuming that the Druber website has multiple pages, I would first delegate pages to the frontend team members to ensure full coverage and avoid duplication 
+2. Once I know which page(s) to work on, I would work on the associated styling sheet(s) and use media queries. 
 
-In order to make Druber's web page responsive, I will be using: 
+### ❓Why media queries?
 
-1) Media Queries – Styling elements based on viewport width 
-3) Flexbox – Layout model that dynamically arranges elements depending on available free space
+Media queries will allow me to style elements based on viewport width. 
 
-## Solution implementation 
-1. Firstly, I must add a "viewport" `<meta>`tag to control the viewport's size and shape
+While I could create another stylesheet for different media, I am going to inject media queries directly into the already-existing style sheets for simplicity. I would definitely considering separating them out if this website was more complex (for readability). 
+
+## Solution implementation and example 
+To illustrate how I would make this website mobile-compatible, I have created a (*very*) basic (and unattractive) landing page for Druber that is only properly displayed in desktop (1920x1080). As shown below, the website becomes extremely unreadable and poorly formatted as the size of the screen narrows. 
+
+<Insert GIF of website> 
+
+### Where do I start? 
+The first thing I notice about this page is that there are three main sections: 
+1. The navigation bar at the top
+2. The "About" section with images/text 
+3. The "Order" section with user inputs 
+
+I'm going to tackle each section one at a time, starting with the "About" section as it seems to be the most simple. 
+
+### Fixing the "About" section
+
+I've chosen to demonstrate ___ because I garauntee you will come across this kind of layout in any webpage. This fix will be quite simple, as all we have to do is to ensure that the images can stack ontop of each other (also known as wrap). 
+
+Think: what part of the CSS is causing these images to render in one row? 
+
+I notice that `flex-direction` is set to `row`. 
+
+I add a media query: 
+
+```
+@media (max-width: 800px) {
+    .descriptions {
+        flex-direction: column;
+    }
+}
+```
+What is this doing? 
+`@media (max-with: 800px)` is esentially saying: "As long as the screen is less than 800px..."
+
+This allows us to change the styling of the "About" section when the screen size is less than 800px. 
+
+The images and descriptions are now stacked on top of eachother, but it doesn't look quite right. This is because the width of the images are still set to `33%`, which made sense when they were sharing the width of the desktop screen, but not anymore. I modify the width and heights accordingly to: 
+
+```
+@media (max-width: 800px) {
+    .descriptions>div {
+        width: 100%;
+        height: 30%;        
+    }
+}
+```
+
+## Fixing the nav bar 
+
+In responsive design, it's not always about figuring out how to rearrange components to make them look presentable, but it's also important to identify sections that need to be re-designed. The "About" section was very simple to change as only the positioning and size of the elements were moved around. A component like the nav bar is more challenging as its appearance will be changing.
+
+
+
+
+
+
+
+
+1. Firstly, I must make sure that there is a "viewport" `<meta>`tag to control the viewport's size and shape
 
 `<meta name="viewport" content="width=device-width, initial-scale=1" />`
 
