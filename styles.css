@@ -1,3 +1,101 @@
-.hello {
-    color: aqua;
+.navbar {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+nav {
+    background: teal;
+    height: 80px;
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+    padding-right: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background: grey;
+    transition: .5s;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+.descriptions>div {
+    height: 30%;
+    width: 30%;
+}
+
+.descriptions>div>img {
+    width: 100%
+}
+
+
+.descriptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0, 100px, 0, 100px;
+}
+
+.order {
+    display: flex;
+    flex-direction: row;
+}
+
+.orderBox {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    background-color: white;
+    z-index: 9;
+}
+
+.orderPanel {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    height: 35%f
+}
+
+input {
+    height: 50%;
+}
+
+.orderBox>button {
+    width: 40%;
+    align-self: center;
 }
