@@ -167,6 +167,11 @@ toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
 ```
+    
+## Fixing the "Order" section
+To avoid repetition, I'm not going to walk through restyling this section as it is very similar to those above. In a similar fashion, I would use media queries to change the layout as follows: 
+    
+    INSERT PIC OF MOBILE
 
 ## Challenges to consider
 
