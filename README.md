@@ -130,9 +130,8 @@ When the toggle button appears on mobile, the navbar items should disappear. I c
 
 
 The rest of the CSS in this media query is to style the menu bar: 
-
 ```
-   .navbar {
+       .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -149,7 +148,7 @@ The rest of the CSS in this media query is to style the menu bar:
     .navbar-links ul li a {
         padding: .5rem 1rem;
     }
-    ```
+```
     
 In order to determine whether the menu items should be shown or not, I will insert the below styling to display the menu items when it is active: 
     
@@ -168,23 +167,19 @@ toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
 ```
-Although this is a very simple example of making a website responsive, these are the principles that one could use for any given website. 
 
 ## Challenges to consider
-  
-    
-    There are many challenges to consider: 
-    
-    - Prioritization: 
-    - Performance: 
-    - Accessibility: 
-    - Modularity
-    - Testing
-    - Design/UI: prototypes, user testing, accessibility
-    - Optimization
 
-## What *should* the Druber team have done?
+The above is a simplified solution to this issue, and there are many other factors that are worth considering:
     
-    Straight off the bat, the Druber team should have written mobile styles first, then consider more complex, desktop specific styles. Before developing anything, our team should have prototyped early on, created components, and discussed how they can be reassembled for different screen sizes. This would have been much more efficient as we would not have had to go back to make modifications. 
+- Prioritization: 
+- Performance: 
+- Accessibility: 
+- Modularity
+- Testing
+- Design/UI: prototypes, user testing, accessibility
+- Optimization
 
-## Future considerations
+## What *should* the DRUBER team have done?
+    
+If we could go back in time, the DRUBER team should have first prioritized mobile design, then worked our way up to more complex, desktop screen sizes. Mobile-first design (also known as progressive advancement) is effective for a few reasons. Firstly, it will naturally force developers/designers to understand and identify the most necessary and key elements of a website, without the added fluff. Prioritzing these essential sections and making sure they are properly displayed is vital. Once we have mobile nailed down, we can play around as we expand the design and functionality to account for desktop. 
