@@ -13,35 +13,31 @@ When was the last time you called an Uber from your laptop? I bet you're having 
 
 ## What is my solution? 
 
-📱Responsive design!   
+📱Responsive design using media queries! 
 
-### ❓What is responsive design?
+### ❓What is responsive design? 
 
 Responsive design accounts for the size of the user's screen and adjusts the display of content accordingly; this allows for compatability with all devices. 
-
-## Assumptions COME BACK TO THIS...NOT SURE IF WE NEED
-Although this solution can be widely applied across different languages and frameworks, I have chosen to use vanilla HTML/CSS for the purposes of this demonsration. 
-
-## Where do we start? 
-Before diving into the code, it's crucial to understand that this issue that our team creates an effective plan of attack. 
-
-1. Firstl
-1. Assuming that our DRUBER website has multiple pages, I would first delegate the pages among the developers to ensure full coverage and to avoid overlap. 
-1. Assuming that the Druber website has multiple pages, I would first delegate pages to the frontend team members to ensure full coverage and avoid duplication 
-2. Once I know which page(s) to work on, I would work on the associated styling sheet(s) and use media queries. 
 
 ### ❓Why media queries?
 
 Media queries will allow me to style elements based on viewport width. 
 
-While I could create another stylesheet for different media, I am going to inject media queries directly into the already-existing style sheets for simplicity. I would definitely considering separating them out if this website was more complex (for readability). 
+### 
 
-## Solution implementation and example 
-To illustrate how I would make this website mobile-compatible, I have created a (*very*) basic (and unattractive) landing page for Druber that is only properly displayed in desktop (1920x1080). As shown below, the website becomes extremely unreadable and poorly formatted as the size of the screen narrows. 
+## Assumptions COME BACK TO THIS...NOT SURE IF WE NEED
+Although this solution can be widely applied across different languages and frameworks, I have chosen to use vanilla HTML/CSS for the purposes of this demonsration. 
+
+## Where do we start? 
+1. Before diving into the code, it's crucial to understand that this issue impacts *both* developers *and* designers. Before diving head first into the code, it's a good idea to work together **to create a separate wireframe** for mobile. This will allow the team to collectively work through the structure of the website and establish expectations. 
+2. Once the wireframe has been complete, I would delegate the pages of the website among the developers to ensure full coverage and avoid overlap. This will also help us to prevent merge conflicts and to work at a faster pace. 
+
+## Solution Implementation + Example
+To illustrate the process of making DRUBER mobile-compatible, I will be using a landing page mock-up as an example. Right now, it is only compatible with desktop (1920x1080). As shown below, the website becomes extremely unreadable and poorly formatted as the size of the screen narrows. 
 
 <Insert GIF of website> 
 
-### Where do I start? 
+### Where do I start? ANOTHER NAME FOR THIS
 
 First and foremost, I must make sure that there is a "viewport" `<meta>`tag to control the viewport's size and shape: 
 
@@ -49,22 +45,22 @@ First and foremost, I must make sure that there is a "viewport" `<meta>`tag to c
 
 This will ensure that the browser is aware of the device's dimensions. 
 
-Next, I notice about this page is that there are three main sections: 
+Next, I notice that this page has three distinct sections: 
 1. The navigation bar at the top
 2. The "About" section with images/text 
-3. The "Order" section with user inputs 
+3. The "Order" section with user input dialog box
 
-I'm going to tackle each section one at a time, starting with the "About" section as it seems to be the most simple. 
+I'm going to tackle each section one at a time, starting with "About" as it seems to be the most simple. 
 
-### Fixing the "About" section
+### Fixing the "About" Section
+    
+This section features side-by-side images with descriptions – a very basic layout that most websites will have. To make this mobile-friendly, we simply have to ensure that the images/descriptions can stack on top of each other (or in other words, wrap). 
 
-I've chosen to demonstrate ___ because I garauntee you will come across this kind of layout in any webpage. This fix will be quite simple, as all we have to do is to ensure that the images can stack ontop of each other (also known as wrap). 
+🧠 Which part of the CSS is making these images to be aligned horizontally? 
 
-Think: what part of the CSS is causing these images to render in one row? 
+💡 It looks like flex-direction` is set to `row`. 
 
-I notice that `flex-direction` is set to `row`. 
-
-I add a media query: 
+Solution: I add a media query 
 
 ```
 @media (max-width: 800px) {
@@ -73,12 +69,12 @@ I add a media query:
     }
 }
 ```
-What is this doing? 
+Explanation: 
 `@media (max-with: 800px)` is esentially saying: "As long as the screen is less than 800px..."
 
-This allows us to change the styling of the "About" section when the screen size is less than 800px. 
+This allows us to change the styling of the section when the screen width is less than 800px. 
 
-The images and descriptions are now stacked on top of eachother, but it doesn't look quite right. This is because the width of the images are still set to `33%`, which made sense when they were sharing the width of the desktop screen, but not anymore. I modify the width and heights accordingly to: 
+The images and descriptions are now stacked on top of eachother, but it doesn't look quite right. This is because the width of the images are still set to `33%`, which no longer makes sense for mobile as there is only one image per row. Thus, I can modify the width and heights accordingly to: 
 
 ```
 @media (max-width: 800px) {
@@ -89,11 +85,12 @@ The images and descriptions are now stacked on top of eachother, but it doesn't 
 }
 ```
 
-## Fixing the nav bar 
+## Fixing the Navigation Bar 
 
-In responsive design, it's not always about figuring out how to rearrange components to make them look presentable, but it's also important to identify sections that need to be re-designed. The "About" section was very simple to change as only the positioning and size of the elements were moved around. A component like the nav bar is more challenging as its appearance will be changing.
-
-It doesn't take long to realize that it is very unlikely that all of the navigation items will fit on a mobile screen. What can we do instead? We can collapse all of the items into a hamburger menu that expands on click. 
+In responsive design, some sections cannot just be rearranged, but have to be completely reimagined. The "About" section was fairly simple as we merely had to ajdust the positioning and size of the elements. On the other hand, a component like the nav bar is more challenging. It doesn't take long to realize that all of the navigation items will not fit onto the header of a mobile screen. 
+    
+🧠 What can we do instead? 
+💡 We can collapse all of the items into a hamburger menu that expands on click. 
 
 1. Firstly I'll make a toggle button by inserting the following into my HTML page: 
 
