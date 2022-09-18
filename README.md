@@ -9,6 +9,8 @@ To help illustrate my explanation, I've created a (*very*) basic (and visually u
 
 ## Why is mobile compatibility important? 
 
+> Globally, 68.1% of all website visits in 2020 came from mobile devices—an increase from 63.3% in 2019.
+
 When was the last time you called an Uber from your laptop? I bet you're having a hard time thinking of an example because you've probably never had to! Similarly, customers will likely be interacting with DRUBER through their phones, and it's absolutely critical to accomodate to these mobile users. Poor web design drives users away and increases bounce rates – in order to capture our market, we must create a seamless experience for all customers, on all devices. 
 
 ## What is my solution? 
