@@ -178,14 +178,14 @@ To avoid repetition, I'm not going to walk through restyling this section as it 
 
 While our team is adjusting our website to mobile devices, we must also consider the following questions to create a truly phenomnal user experience. 
     
-- **Prioritization: **
+- **Prioritization:**
   A smaller device means content is fighting for screen space – which sections of the website are the most important and add the deepest value to our       customers?  
 - **Performance:**
   The performance (speed at which content loads and renders) of a website is strongly correlated to user experience. How can we finetune and optimize our   website's CSS performance and deliver content faster to our customers? 
 - **Accessibility:**
   How can we ensure that our website design and layout is accessible to all people? Are we accommodating to people with disabilities and providing a         positive experience for *all* users? 
-- **Modularity**
+- **Modularity:**
   How scalable is our website? Have we broken it up into modules that can be easily and flexibly rearranged? Do we have reusable components and             patterns? 
-- **Testing**
+- **Testing:**
   Have we extensively tested our website on various devices to minimize bugs and ensure there is no unexpected behaviour? 
 
