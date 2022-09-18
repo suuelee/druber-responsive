@@ -92,7 +92,7 @@ In responsive design, some sections cannot just be rearranged, but have to be co
 🧠 What can we do instead? 
 💡 We can collapse all of the items into a hamburger menu that expands on click. 
 
-1. Firstly I'll make a toggle button by inserting the following into my HTML page: 
+1. Firstly, I'll make a toggle button by inserting the following into my HTML page: 
 
 ```
    <a href="#" class="toggle-button">
@@ -115,10 +115,10 @@ Next, I'll add some styling:
     height: 30px;
 }
 ```
-Notice `display: none`. This has been added intentionally as the hamburger button *should not show* on desktop. This is a very common technique when designing for mobile.
+Notice `display: none`. This has been added intentionally as the hamburger button *should not show* on desktop. This is a very common technique to hide certain elements based on size when designing for mobile.
 
 Now, I'll use a media query to ensure that the hamburger button *is* displayed when the screen width is narrow enough: 
-
+ 
 ```
 @media (max-width: 800px) {
 
@@ -126,9 +126,10 @@ Now, I'll use a media query to ensure that the hamburger button *is* displayed w
         display: flex;
     }
 ```
-When the toggle button appears, we should also make the navbar links disappear. I can achieve this by setting `display: none` (within that same media query). 
+When the toggle button appears on mobile, the navbar items should disappear. I can achieve this by setting `display: none` (within that same media query). 
 
-The rest of the css in that media query is to style that menu bar. It should look like: 
+
+The rest of the CSS in this media query is to style the menu bar: 
 
 ```
    .navbar {
@@ -148,12 +149,16 @@ The rest of the css in that media query is to style that menu bar. It should loo
     .navbar-links ul li a {
         padding: .5rem 1rem;
     }
-
+    ```
+    
+In order to determine whether the menu items should be shown or not, I will insert the below styling to display the menu items when it is active: 
+    
+  ```
     .navbar-links.active {
         display: flex;
-    }
+    }    
 ```
-Lastly, I'll have to add some Javascript in order for the hamburger button to toggle open. In my script.js file, I add: 
+Finally, I'll have to add some Javascript in order for the toggle button to actually open and close. In my script.js file, I add: 
 
 ```
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
@@ -165,14 +170,8 @@ toggleButton.addEventListener('click', () => {
 ```
 Although this is a very simple example of making a website responsive, these are the principles that one could use for any given website. 
 
-## Who does this impact? 
-    
-Responsive design will likely be a team effort as it impacts both front and back end developers, as well as designers. 
-      
-   - As shown in the nav bar example, the design of the nav bar completely changed. The designer would likely be required to create a new design
-   - Developers will have to modify CSS styling, some HTML, and potentially Javascript 
-
 ## Challenges to consider
+  
     
     There are many challenges to consider: 
     
