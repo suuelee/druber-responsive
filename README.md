@@ -77,10 +77,69 @@ The images and descriptions are now stacked on top of eachother, but it doesn't 
 
 In responsive design, it's not always about figuring out how to rearrange components to make them look presentable, but it's also important to identify sections that need to be re-designed. The "About" section was very simple to change as only the positioning and size of the elements were moved around. A component like the nav bar is more challenging as its appearance will be changing.
 
+It doesn't take long to realize that it is very unlikely that all of the navigation items will fit on a mobile screen. What can we do instead? We can collapse all of the items into a hamburger menu that expands on click. 
 
+1. Firstly I'll make a toggle button by inserting the following into my HTML page: 
 
+```
+   <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+   </a>
+```
+Next, I'll add some styling: 
 
+```
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+}
+```
+Notice `display: none`. This has been added intentionally as the hamburger button *should not show* on desktop. This is a very common technique when designing for mobile.
 
+Now, I'll use a media query to ensure that the hamburger button *is* displayed when the screen width is narrow enough: 
+
+```
+@media (max-width: 800px) {
+
+    .toggle-button {
+        display: flex;
+    }
+```
+When the toggle button appears, we should also make the navbar links disappear. I can achieve this by setting `display: none` (within that same media query). 
+
+The rest of the css in that media query is to style that menu bar. It should look like: 
+
+```
+   .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+```
 
 
 
