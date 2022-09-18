@@ -140,7 +140,16 @@ The rest of the css in that media query is to style that menu bar. It should loo
         display: flex;
     }
 ```
+Lastly, I'll have to add some Javascript in order for the hamburger button to toggle open. In my script.js file, I add: 
 
+```
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+})
+```
 
 
 1. Firstly, I must make sure that there is a "viewport" `<meta>`tag to control the viewport's size and shape
