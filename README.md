@@ -1,19 +1,23 @@
 # druber-responsive
 
-### Please note: 
+### 📝Please note: 
 To help illustrate my explanation, I've created a (*very*) basic (and visually unappealing) landing page for DRUBER. Please feel free to take a look at the source code above (the focus was on making the page responsive, not on the design). 
 
-## Issue
+## 🤒Issue
 
 "You and your friends are developing a new start-up called DRUBER, a drone-based ride share application that carries you to your destination. The original specification was to develop a web page that works in 1920x1080 however your company has realized that it is missing an entire market of smartphone users. Describe how you can modify your code to work in smartphone resolutions e.g. 750x1334 (iPhone 8). Please give specific examples where possible, but do not implement an entire DRUBER clone!"
 
-## Why is mobile compatibility important? 
+##📱Why is mobile compatibility important? 
 
 > Globally, 68.1% of all website visits in 2020 came from mobile devices—an increase from 63.3% in 2019.
 
 When was the last time you called an Uber from your laptop? You've probably never done that before! Similarly, customers will likely be interacting with DRUBER through their phones, and it's absolutely critical to accomodate to these mobile users. Poor web design drives users away and increases bounce rates – in order to fully capture our market, we must create a seamless experience for all customers, on all devices. 
 
-## What is my solution? 
+## 🤔What *should* the DRUBER team have done?
+    
+If we could go back in time, the DRUBER team should have first prioritized mobile design, then worked our way up to more complex, desktop screen sizes. Mobile-first design (also known as progressive advancement) is important as it naturally forces developers/designers to understand and identify the most necessary and key elements of a website, without the added fluff. Prioritzing these essential sections and making sure they are properly displayed is vital. Once we have mobile nailed down, we can play around as we expand the design and functionality to account for desktop. ### EDITTTT 
+
+## ✅What is my solution? 
 
 📱Responsive design using media queries 
 
@@ -25,11 +29,11 @@ Responsive design accounts for the size of the user's screen and adjusts the dis
 
 Media queries will allow me to style elements based on viewport width. 
 
-## Where do we start? 
+## 🤷🏻‍♀️Where do we start? 
 1. Before diving into the code, it's crucial to understand that this issue impacts *both* developers *and* designers. Before diving head first into the code, it's a good idea to work together **to create a separate wireframe** for mobile. This will allow the team to collectively work through the structure of the website and establish expectations. 
 2. Once the wireframe has been completed, I would delegate the pages of the website among the developers to ensure full coverage and avoid overlap. This will also help us to prevent merge conflicts and to work at a faster pace. 
 
-## Solution Implementation + Example
+## 🧩Solution Implementation + Example
 To illustrate the process of making DRUBER mobile-compatible, I will be using a mock landing page as an example. Right now, it is only compatible with desktop (1920x1080). As shown below, the webpage becomes extremely unreadable and poorly formatted as the size of the screen narrows. 
 
 <Insert GIF of website> 
@@ -170,21 +174,18 @@ To avoid repetition, I'm not going to walk through restyling this section as it 
     
     INSERT PIC OF MOBILE
 
-## Challenges to consider
+## ⚠️Important Considerations
 
-The above is a simplified solution to this issue, and there are many other factors that are worth considering:
+While our team is adjusting our website to mobile devices, we must also consider the following questions to create a truly phenomnal user experience. 
     
-- Prioritization: 
-  A smaller device means content is fighting for screen space – which sections of the website are the most important and add the deepest value to our       customers. 
-- Performance: 
+- **Prioritization: **
+  A smaller device means content is fighting for screen space – which sections of the website are the most important and add the deepest value to our       customers?  
+- **Performance:**
   The performance (speed at which content loads and renders) of a website is strongly correlated to user experience. How can we finetune and optimize our   website's CSS performance and deliver content faster to our customers? 
-- Accessibility: 
-  How can we ensure that our website design and layout is accessible to all people? Is our website navigation friendly, 
-- Modularity
-  How scalable is our website? Have we broken up our website into modules that can be easily and flexibly rearranged? Do we have reusable components and     patterns? 
-- Testing
+- **Accessibility:**
+  How can we ensure that our website design and layout is accessible to all people? Are we accommodating to people with disabilities and providing a         positive experience for *all* users? 
+- **Modularity**
+  How scalable is our website? Have we broken it up into modules that can be easily and flexibly rearranged? Do we have reusable components and             patterns? 
+- **Testing**
   Have we extensively tested our website on various devices to minimize bugs and ensure there is no unexpected behaviour? 
 
-## What *should* the DRUBER team have done?
-    
-If we could go back in time, the DRUBER team should have first prioritized mobile design, then worked our way up to more complex, desktop screen sizes. Mobile-first design (also known as progressive advancement) is important as it naturally forces developers/designers to understand and identify the most necessary and key elements of a website, without the added fluff. Prioritzing these essential sections and making sure they are properly displayed is vital. Once we have mobile nailed down, we can play around as we expand the design and functionality to account for desktop. ### EDITTTT 
