@@ -30,10 +30,10 @@ Although this solution can be widely applied across different languages and fram
 
 ## Where do we start? 
 1. Before diving into the code, it's crucial to understand that this issue impacts *both* developers *and* designers. Before diving head first into the code, it's a good idea to work together **to create a separate wireframe** for mobile. This will allow the team to collectively work through the structure of the website and establish expectations. 
-2. Once the wireframe has been complete, I would delegate the pages of the website among the developers to ensure full coverage and avoid overlap. This will also help us to prevent merge conflicts and to work at a faster pace. 
+2. Once the wireframe has been completed, I would delegate the pages of the website among the developers to ensure full coverage and avoid overlap. This will also help us to prevent merge conflicts and to work at a faster pace. 
 
 ## Solution Implementation + Example
-To illustrate the process of making DRUBER mobile-compatible, I will be using a landing page mock-up as an example. Right now, it is only compatible with desktop (1920x1080). As shown below, the website becomes extremely unreadable and poorly formatted as the size of the screen narrows. 
+To illustrate the process of making DRUBER mobile-compatible, I will be using a mock landing page as an example. Right now, it is only compatible with desktop (1920x1080). As shown below, the webpage becomes extremely unreadable and poorly formatted as the size of the screen narrows. 
 
 <Insert GIF of website> 
 
@@ -54,11 +54,11 @@ I'm going to tackle each section one at a time, starting with "About" as it seem
 
 ### Fixing the "About" Section
     
-This section features side-by-side images with descriptions – a very basic layout that most websites will have. To make this mobile-friendly, we simply have to ensure that the images/descriptions can stack on top of each other (or in other words, wrap). 
+This section features side-by-side images with descriptions – a very basic layout that most websites have. To make this mobile-friendly, we simply have to ensure that the images/descriptions can stack on top of each other (or in other words, wrap). 
 
 🧠 Which part of the CSS is making these images to be aligned horizontally? 
 
-💡 It looks like flex-direction` is set to `row`. 
+💡 It looks like `flex-direction` is set to `row`. 
 
 Solution: I add a media query 
 
@@ -150,7 +150,7 @@ The rest of the CSS in this media query is to style the menu bar:
     }
 ```
     
-In order to determine whether the menu items should be shown or not, I will insert the below styling to display the menu items when it is active: 
+In order to determine whether the menu items should be shown or not, I will use .active to display the menu items when it is active: 
     
   ```
     .navbar-links.active {
@@ -169,7 +169,7 @@ toggleButton.addEventListener('click', () => {
 ```
     
 ## Fixing the "Order" section
-To avoid repetition, I'm not going to walk through restyling this section as it is very similar to those above. In a similar fashion, I would use media queries to change the layout as follows: 
+To avoid repetition, I'm not going to walk through restyling this section as it is very similar to those above. In a similar fashion, I would use media queries to change the layout as follows: ## EDITTT
     
     INSERT PIC OF MOBILE
 
@@ -187,4 +187,4 @@ The above is a simplified solution to this issue, and there are many other facto
 
 ## What *should* the DRUBER team have done?
     
-If we could go back in time, the DRUBER team should have first prioritized mobile design, then worked our way up to more complex, desktop screen sizes. Mobile-first design (also known as progressive advancement) is effective for a few reasons. Firstly, it will naturally force developers/designers to understand and identify the most necessary and key elements of a website, without the added fluff. Prioritzing these essential sections and making sure they are properly displayed is vital. Once we have mobile nailed down, we can play around as we expand the design and functionality to account for desktop. 
+If we could go back in time, the DRUBER team should have first prioritized mobile design, then worked our way up to more complex, desktop screen sizes. Mobile-first design (also known as progressive advancement) is important as it naturally forces developers/designers to understand and identify the most necessary and key elements of a website, without the added fluff. Prioritzing these essential sections and making sure they are properly displayed is vital. Once we have mobile nailed down, we can play around as we expand the design and functionality to account for desktop. ### EDITTTT 
