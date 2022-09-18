@@ -1,23 +1,32 @@
 # druber-responsive
 
+### Before reading, please note: 
+To help illustrate my explanation, I've created a (*very*) basic (and visually unappealing) landing page for DRUBER. Please feel free to take a look at the source code above (the focus was on making the page responsive, not on the design). 
+
 ## Issue
 
 "You and your friends are developing a new start-up called DRUBER, a drone-based ride share application that carries you to your destination. The original specification was to develop a web page that works in 1920x1080 however your company has realized that it is missing an entire market of smartphone users. Describe how you can modify your code to work in smartphone resolutions e.g. 750x1334 (iPhone 8). Please give specific examples where possible, but do not implement an entire DRUBER clone!"
 
 ## Why is mobile compatibility important? 
 
+When was the last time you called an Uber from your laptop? I bet you're having a hard time thinking of an example because you've probably never had to! Similarly, customers will likely be interacting with DRUBER through their phones, and it's absolutely critical to accomodate to these mobile users. Poor web design drives users away and increases bounce rates – in order to capture our market, we must create a seamless experience for all customers, on all devices. 
+
 ## What is my solution? 
 
-Responsive design! 
+📱Responsive design!   
 
 ### ❓What is responsive design?
 
-Responsive design accounts for the size of the user's screen and adjusts accordingly; this allows for compatability with all devices. 
+Responsive design accounts for the size of the user's screen and adjusts the display of content accordingly; this allows for compatability with all devices. 
 
-## Assumptions
+## Assumptions COME BACK TO THIS...NOT SURE IF WE NEED
 Although this solution can be widely applied across different languages and frameworks, I have chosen to use vanilla HTML/CSS for the purposes of this demonsration. 
 
-## How will my solution be achieved? 
+## Where do we start? 
+Before diving into the code, it's crucial to understand that this issue that our team creates an effective plan of attack. 
+
+1. Firstl
+1. Assuming that our DRUBER website has multiple pages, I would first delegate the pages among the developers to ensure full coverage and to avoid overlap. 
 1. Assuming that the Druber website has multiple pages, I would first delegate pages to the frontend team members to ensure full coverage and avoid duplication 
 2. Once I know which page(s) to work on, I would work on the associated styling sheet(s) and use media queries. 
 
