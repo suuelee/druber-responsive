@@ -179,5 +179,7 @@ Responsive design will likely be a team effort as it impacts both front and back
     - Optimization
 
 ## What *should* the Druber team have done?
+    
+    Straight off the bat, the Druber team should have written mobile styles first, then consider more complex, desktop specific styles. Before developing anything, our team should have prototyped early on, created components, and discussed how they can be reassembled for different screen sizes. This would have been much more efficient as we would not have had to go back to make modifications. 
 
 ## Future considerations
