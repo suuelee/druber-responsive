@@ -157,12 +157,26 @@ toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
 ```
-
-
+Although this is a very simple example of making a website responsive, these are the principles that one could use for any given website. 
 
 ## Who does this impact? 
+    
+Responsive design will likely be a team effort as it impacts both front and back end developers, as well as designers. 
+      
+   - As shown in the nav bar example, the design of the nav bar completely changed. The designer would likely be required to create a new design
+   - Developers will have to modify CSS styling, some HTML, and potentially Javascript 
 
 ## Challenges to consider
+    
+    There are many challenges to consider: 
+    
+    - Prioritization: 
+    - Performance: 
+    - Accessibility: 
+    - Modularity
+    - Testing
+    - Design/UI: prototypes, user testing, accessibility
+    - Optimization
 
 ## What *should* the Druber team have done?
 
