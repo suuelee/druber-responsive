@@ -1,6 +1,6 @@
 # druber-responsive
 
-### Before reading, please note: 
+### Please note: 
 To help illustrate my explanation, I've created a (*very*) basic (and visually unappealing) landing page for DRUBER. Please feel free to take a look at the source code above (the focus was on making the page responsive, not on the design). 
 
 ## Issue
@@ -11,11 +11,11 @@ To help illustrate my explanation, I've created a (*very*) basic (and visually u
 
 > Globally, 68.1% of all website visits in 2020 came from mobile devices—an increase from 63.3% in 2019.
 
-When was the last time you called an Uber from your laptop? I bet you're having a hard time thinking of an example because you've probably never had to! Similarly, customers will likely be interacting with DRUBER through their phones, and it's absolutely critical to accomodate to these mobile users. Poor web design drives users away and increases bounce rates – in order to capture our market, we must create a seamless experience for all customers, on all devices. 
+When was the last time you called an Uber from your laptop? You've probably never done that before! Similarly, customers will likely be interacting with DRUBER through their phones, and it's absolutely critical to accomodate to these mobile users. Poor web design drives users away and increases bounce rates – in order to fully capture our market, we must create a seamless experience for all customers, on all devices. 
 
 ## What is my solution? 
 
-📱Responsive design using media queries! 
+📱Responsive design using media queries 
 
 ### ❓What is responsive design? 
 
@@ -24,11 +24,6 @@ Responsive design accounts for the size of the user's screen and adjusts the dis
 ### ❓Why media queries?
 
 Media queries will allow me to style elements based on viewport width. 
-
-### 
-
-## Assumptions COME BACK TO THIS...NOT SURE IF WE NEED
-Although this solution can be widely applied across different languages and frameworks, I have chosen to use vanilla HTML/CSS for the purposes of this demonsration. 
 
 ## Where do we start? 
 1. Before diving into the code, it's crucial to understand that this issue impacts *both* developers *and* designers. Before diving head first into the code, it's a good idea to work together **to create a separate wireframe** for mobile. This will allow the team to collectively work through the structure of the website and establish expectations. 
@@ -180,12 +175,15 @@ To avoid repetition, I'm not going to walk through restyling this section as it 
 The above is a simplified solution to this issue, and there are many other factors that are worth considering:
     
 - Prioritization: 
+  A smaller device means content is fighting for screen space – which sections of the website are the most important and add the deepest value to our       customers. 
 - Performance: 
+  The performance (speed at which content loads and renders) of a website is strongly correlated to user experience. How can we finetune and optimize our   website's CSS performance and deliver content faster to our customers? 
 - Accessibility: 
+  How can we ensure that our website design and layout is accessible to all people? Is our website navigation friendly, 
 - Modularity
+  How scalable is our website? Have we broken up our website into modules that can be easily and flexibly rearranged? Do we have reusable components and     patterns? 
 - Testing
-- Design/UI: prototypes, user testing, accessibility
-- Optimization
+  Have we extensively tested our website on various devices to minimize bugs and ensure there is no unexpected behaviour? 
 
 ## What *should* the DRUBER team have done?
     
