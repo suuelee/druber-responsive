@@ -33,7 +33,14 @@ To illustrate how I would make this website mobile-compatible, I have created a 
 <Insert GIF of website> 
 
 ### Where do I start? 
-The first thing I notice about this page is that there are three main sections: 
+
+First and foremost, I must make sure that there is a "viewport" `<meta>`tag to control the viewport's size and shape: 
+
+`<meta name="viewport" content="width=device-width, initial-scale=1" />`
+
+This will ensure that the browser is aware of the device's dimensions. 
+
+Next, I notice about this page is that there are three main sections: 
 1. The navigation bar at the top
 2. The "About" section with images/text 
 3. The "Order" section with user inputs 
@@ -151,14 +158,6 @@ toggleButton.addEventListener('click', () => {
 })
 ```
 
-
-1. Firstly, I must make sure that there is a "viewport" `<meta>`tag to control the viewport's size and shape
-
-`<meta name="viewport" content="width=device-width, initial-scale=1" />`
-
-This will ensure that the browser is aware of the device's dimensions. 
-
-2. 
 
 
 ## Who does this impact? 
