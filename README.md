@@ -88,7 +88,7 @@ The images and descriptions are now stacked on top of eachother, but it doesn't 
 ![About Responsive](https://user-images.githubusercontent.com/73853606/190954191-e90dbd97-129b-46fb-90f7-da831b6670fc.gif)
 
 
-## Fixing the Navigation Bar 
+## 🔨Fixing the Navigation Bar 
 
 In responsive design, some sections cannot just be rearranged, but rather have to be completely reimagined. The "About" section above was fairly simple as we merely had to ajdust the positioning and size of the elements. On the other hand, a component like the navigation bar is more challenging. The navigation menu items will clearly not fit onto the header of a mobile screen. 
     
@@ -172,16 +172,12 @@ toggleButton.addEventListener('click', () => {
 })
 ```
 
-### Responsive Nav Bar Result
+### 📱 Responsive Nav Bar Result
 ![Responsive Nav Bar](https://user-images.githubusercontent.com/73853606/190954160-c6ccaef0-a756-444e-a189-df7d36ec9037.gif)
 
     
-## Fixing the "Order" section
-To avoid repetition, I will not walk through restyling this section as it is very similar to the layout change in "About". Please feel free to take a look at the source code in the files. 
-
-### Responsive "Order" Section Result
-    
-    # INSERT PIC OF MOBILE
+## 🔨 Fixing the "Order" section
+To avoid repetition, I will not walk through restyling this section as it is very similar to the layout change in "About". 
 
 ## ⚠️Important Considerations
 
@@ -198,6 +194,6 @@ Throughout the process of improving the mobile experience, it is worth asking th
 - **Testing:**
   Have we extensively tested our website on various devices to minimize bugs and ensure there is no unexpected behaviour? 
 
-## 🤔Finally, what *should* the DRUBER team have done from the start?
+## 🤔 Finally, what *should* the DRUBER team have done from the start?
     
 If we could go back in time, the DRUBER team should have first prioritized mobile design, then worked our way up to more complex, desktop screen sizes. Mobile-first design (also known as progressive advancement) is important as it naturally forces developers/designers to understand and identify the most necessary and key elements of a website, without the added fluff. Prioritizing these critical sections and making sure they are first and foremost properly displayed is an effective approach to web design. If we had first nailed down our mobile site, we could have then added more complexity and functionality to the desktop version. 
