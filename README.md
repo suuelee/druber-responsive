@@ -179,7 +179,7 @@ toggleButton.addEventListener('click', () => {
 ## 🔨 Fixing the "Order" section
 To avoid repetition, I will not walk through restyling this section as it is very similar to the layout change in "About". 
 
-## ⚠️Important Considerations
+## ⚠️ Important Considerations
 
 Throughout the process of improving the mobile experience, it is worth asking the following questions: 
     
