@@ -69,7 +69,7 @@ This section features side-by-side images with descriptions – a very basic la
 }
 ```
 Explanation: 
-`@media (max-with: 800px)` is esentially saying: "As long as the screen is less than 800px..."
+`@media (max-with: 800px)` is essentially saying: "As long as the screen is less than 800px..."
 
 This allows us to change the styling of the section when the screen width is less than 800px. 
 
@@ -89,7 +89,7 @@ The images and descriptions are now stacked on top of eachother, but it doesn't 
 
 ## 🔨 Fixing the Navigation Bar 
 
-In responsive design, some sections cannot just be rearranged, but rather have to be completely reimagined. The "About" section above was fairly simple as we merely had to ajdust the positioning and size of the elements. On the other hand, a component like the navigation bar is more challenging. The navigation menu items will clearly not fit onto the header of a mobile screen. 
+In responsive design, some sections cannot just be rearranged, but rather have to be completely reimagined. The "About" section above was fairly simple as we merely had to adjust the positioning and size of the elements. On the other hand, a component like the navigation bar is more challenging. The navigation menu items will clearly not fit onto the header of a mobile screen. 
     
 🧠 What should we do with the menu links?  
 💡 We can collapse all of the items into a hamburger menu that expands on click. 
