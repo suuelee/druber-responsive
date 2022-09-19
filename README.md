@@ -171,7 +171,7 @@ toggleButton.addEventListener('click', () => {
 })
 ```
 
-### 📱 Responsive Nav Bar Result
+### 📱 Responsive Navigation Bar Result
 ![Responsive Nav Bar](https://user-images.githubusercontent.com/73853606/190954160-c6ccaef0-a756-444e-a189-df7d36ec9037.gif)
 
     
