@@ -1,41 +1,41 @@
 # druber-responsive
 
-### 📝Please note: 
-To help illustrate my answer, I've created a (*very*) basic landing page for DRUBER. Please feel free to take a look at the source code above (the focus was *not* on the design, but on making the page mobile-friendly). 
+## 📝Note before reading:
+To help illustrate my answer, I've created a (*very*) basic landing page for DRUBER. Please feel free to take a look at the source code above (the focus was *not* on the design, but on making the page mobile friendly). 
 
-## 🤒Issue
+## 🤒 Issue
 
 "You and your friends are developing a new start-up called DRUBER, a drone-based ride share application that carries you to your destination. The original specification was to develop a web page that works in 1920x1080 however your company has realized that it is missing an entire market of smartphone users. Describe how you can modify your code to work in smartphone resolutions e.g. 750x1334 (iPhone 8). Please give specific examples where possible, but do not implement an entire DRUBER clone!"
 
-##📱Why is mobile compatibility important? 
+## 📱 Why is mobile compatibility important? 
 
 > Globally, 68.1% of all website visits in 2020 came from mobile devices—an increase from 63.3% in 2019.
 
 When was the last time you called an Uber from your laptop? You've probably never done that before! Similarly, most customers will likely be interacting with DRUBER through their phones, and it's absolutely critical to accomodate to these mobile users. Poor web design drives users away and increases bounce rates – in order to fully capture our market, we must create a seamless experience for all customers, on all devices. 
 
-## ✅What is my solution? 
+## ✅ What is my solution? 
 
 📱Responsive design using media queries. 
 
 ### ❓What is responsive design? 
 
-Responsive design accounts for the size of the user's screen and adjusts the display of content accordingly; this allows for compatability with all devices. 
+Responsive design accounts for the size of the user's screen and adjusts the display of content accordingly; this allows for compatibility with all devices. 
 
 ### ❓Why media queries?
 
 Media queries will allow the DRUBER team to style elements based on viewport width. 
 
-## 🤷🏻‍♀️Where do we start? 
+## 🤷🏻‍♀️ Where do we start? 
 1. Before diving into the code, it's crucial to understand that this issue impacts *both* developers *and* designers. Before diving head first into the code, it's a good idea to work together **to create a separate wireframe** for mobile. This will allow the team to collectively work through the structure of the website and establish expectations. 
-2. Once the wireframe has been completed, I would delegate the pages of the website among the developers to ensure full coverage and avoid overlap. This will also help us to prevent merge conflicts and to work at a faster pace. 
+2. Once the wireframe has been completed, I would delegate the pages to ensure full coverage and avoid overlap. This will also help us to prevent merge conflicts and to work at a faster pace. 
 
-## 🧩Solution Implementation + Example
+## 🧩 Solution Implementation + Example
 To illustrate the process of making DRUBER mobile-friendly, I will be using a mock landing page as an example. Right now, it is only compatible with desktop (1920x1080). As shown below, the webpage becomes extremely unreadable and poorly formatted as the size of the screen narrows. 
 
 ![Not Responsive](https://user-images.githubusercontent.com/73853606/190954655-3bb91005-a0a7-435f-ab0a-13de7062055d.gif)
 
 
-### ‼️Important
+### ‼️Important 
 
 First and foremost, I must make sure that there is a "viewport" `<meta>`tag to control the viewport's size and shape: 
 
@@ -43,6 +43,7 @@ First and foremost, I must make sure that there is a "viewport" `<meta>`tag to c
 
 This will ensure that the browser is aware of the device's dimensions. 
 
+### ✂️Split into sections
 Next, I notice that this page has three distinct sections: 
 1. The navigation bar at the top
 2. The "About" section with images/text 
@@ -58,7 +59,7 @@ This section features side-by-side images with descriptions – a very basic la
 
 💡 It looks like it's `flex-direction` being set to `row`. 
 
-Solution: Add a media query.
+✅ Solution: Add a media query.
 
 ```
 @media (max-width: 800px) {
@@ -82,8 +83,8 @@ The images and descriptions are now stacked on top of eachother, but it doesn't 
     }
 }
 
-### Responsive "About" Result
 ```
+### 📱 Responsive "About" Result
 ![About Responsive](https://user-images.githubusercontent.com/73853606/190954191-e90dbd97-129b-46fb-90f7-da831b6670fc.gif)
 
 
@@ -140,7 +141,7 @@ In order to determine whether the menu items should be shown or not, I will use 
 
 The rest of the CSS in this media query is to style the menu bar: 
 ```
-       .navbar {
+     .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -176,7 +177,7 @@ toggleButton.addEventListener('click', () => {
 
     
 ## Fixing the "Order" section
-To avoid repetition, I will not walk through restyling this section as it follows very similar principles as the "About" section. Please feel free to take a look at the source code in the files. 
+To avoid repetition, I will not walk through restyling this section as it is very similar to the layout change in "About". Please feel free to take a look at the source code in the files. 
 
 ### Responsive "Order" Section Result
     
@@ -184,7 +185,7 @@ To avoid repetition, I will not walk through restyling this section as it follow
 
 ## ⚠️Important Considerations
 
-While our team is adjusting our website to mobile devices, it is worth asking the following questions: 
+Throughout the process of improving the mobile experience, it is worth asking the following questions: 
     
 - **Prioritization:**
   A smaller device means content is fighting for screen space – which sections of the website are the most important and add the deepest value to our       customers?  
