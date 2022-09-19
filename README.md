@@ -30,7 +30,7 @@ Media queries will allow the DRUBER team to style elements based on viewport wid
 2. Once the wireframe has been completed, I would delegate the pages to ensure full coverage and avoid overlap. This will also help us to prevent merge conflicts and to work at a faster pace. 
 
 ## 🧩 Solution Implementation + Example
-To illustrate the process of making DRUBER mobile-friendly, I will be using a mock landing page as an example. Right now, it is only compatible with desktop (1920x1080). As shown below, the webpage becomes extremely unreadable and poorly formatted as the size of the screen narrows. 
+To illustrate the process of making DRUBER mobile friendly, I will be using a mock landing page as an example. Right now, it is only compatible with desktop (1920x1080). As shown below, the webpage becomes extremely unreadable and poorly formatted as the size of the screen narrows. 
 
 ![Not Responsive](https://user-images.githubusercontent.com/73853606/190954655-3bb91005-a0a7-435f-ab0a-13de7062055d.gif)
 
@@ -51,9 +51,9 @@ Next, I notice that this page has three distinct sections:
 
 I'm going to tackle each section one at a time, starting with "About" as it seems to be the most simple. 
 
-### Fixing the "About" Section
+### 🔨 Fixing the "About" Section
     
-This section features side-by-side images with descriptions – a very basic layout seen on most websites. To make this mobile-friendly, we simply have to ensure that the images/descriptions stack on top of each other (or in other words, wrap) when the width becomes narrow enough. 
+This section features side-by-side images with descriptions – a very basic layout seen on most websites. To make this mobile friendly, we simply have to ensure that the images/descriptions stack on top of each other (or in other words, wrap) when the width of the screen becomes narrow enough. 
 
 🧠 Which part of the CSS is telling these images to be aligned horizontally? 
 
@@ -73,7 +73,7 @@ Explanation:
 
 This allows us to change the styling of the section when the screen width is less than 800px. 
 
-The images and descriptions are now stacked on top of eachother, but it doesn't look quite right. This is because the width of the images are still set to `33%`, which no longer makes sense for mobile as the images are on separate rows. Thus, I can modify the width and heights accordingly to: 
+The images and descriptions are now stacked on top of eachother, but it doesn't look quite right. This is because the width of the images are still set to `33%`, which no longer makes sense for mobile as the images are on separate rows. Thus, I can modify the width and height accordingly to: 
 
 ```
 @media (max-width: 800px) {
@@ -82,13 +82,12 @@ The images and descriptions are now stacked on top of eachother, but it doesn't 
         height: 30%;        
     }
 }
-
 ```
 ### 📱 Responsive "About" Result
 ![About Responsive](https://user-images.githubusercontent.com/73853606/190954191-e90dbd97-129b-46fb-90f7-da831b6670fc.gif)
 
 
-## 🔨Fixing the Navigation Bar 
+## 🔨 Fixing the Navigation Bar 
 
 In responsive design, some sections cannot just be rearranged, but rather have to be completely reimagined. The "About" section above was fairly simple as we merely had to ajdust the positioning and size of the elements. On the other hand, a component like the navigation bar is more challenging. The navigation menu items will clearly not fit onto the header of a mobile screen. 
     
@@ -118,7 +117,7 @@ Next, I'll add some styling:
     height: 30px;
 }
 ```
-Notice `display: none`. This has been added intentionally as the hamburger button *should not show* on desktop. This is a very useful technique to hide certain elements when designing for mobile.
+Notice `display: none`. This has been added intentionally as the hamburger button *should not* show on desktop. This is a very useful technique to hide certain elements when designing for mobile.
 
 I'll now use a media query to ensure that the hamburger button *is* displayed when the screen width is narrow enough: 
  
@@ -131,7 +130,7 @@ I'll now use a media query to ensure that the hamburger button *is* displayed wh
 ```
 When the toggle button appears on mobile, the navbar items should disappear. I can achieve this by setting `display: none` (within that same media query). 
 
-In order to determine whether the menu items should be shown or not, I will use .active to display the menu items when it is active: # COME FIX
+In order to determine whether the menu items should be shown or not, I will use `.active` to display the menu items when they are active:
     
   ```
     .navbar-links.active {
