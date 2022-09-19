@@ -36,7 +36,8 @@ Media queries will allow me to style elements based on viewport width.
 ## 🧩Solution Implementation + Example
 To illustrate the process of making DRUBER mobile-compatible, I will be using a mock landing page as an example. Right now, it is only compatible with desktop (1920x1080). As shown below, the webpage becomes extremely unreadable and poorly formatted as the size of the screen narrows. 
 
-<Insert GIF of website> 
+![Not Responsive](https://user-images.githubusercontent.com/73853606/190954655-3bb91005-a0a7-435f-ab0a-13de7062055d.gif)
+
 
 ### Where do I start? ANOTHER NAME FOR THIS
 
@@ -85,6 +86,8 @@ The images and descriptions are now stacked on top of eachother, but it doesn't 
     }
 }
 ```
+![About Responsive](https://user-images.githubusercontent.com/73853606/190954191-e90dbd97-129b-46fb-90f7-da831b6670fc.gif)
+
 
 ## Fixing the Navigation Bar 
 
@@ -168,6 +171,9 @@ toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
 ```
+
+![Responsive Nav Bar](https://user-images.githubusercontent.com/73853606/190954160-c6ccaef0-a756-444e-a189-df7d36ec9037.gif)
+
     
 ## Fixing the "Order" section
 To avoid repetition, I'm not going to walk through restyling this section as it is very similar to those above. In a similar fashion, I would use media queries to change the layout as follows: ## EDITTT
